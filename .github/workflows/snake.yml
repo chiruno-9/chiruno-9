@@ -1,0 +1,37 @@
+name: Generate snake
+
+on:
+  schedule:
+    # Daily at 00:00 UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/snake.yml
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate snake SVGs
+        uses: Platane/snk@v3.5.0
+        with:
+          github_user_name: chiruno-9
+          # Two flavours: github-dark palette (matches GH dark theme) +
+          # an ice-blue Cirno palette.
+          outputs: |
+            dist/snake-dark.svg?palette=github-dark
+            dist/snake-ice.svg?color_snake=%2300BFFF&color_dots=%23161b22,%23bfdbfe,%2393c5fd,%2360a5fa,%231d4ed8
+
+      - name: Publish to output branch
+        uses: crazy-max/ghaction-github-pages@v5.0.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

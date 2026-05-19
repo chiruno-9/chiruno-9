@@ -11,4 +11,6 @@ Activity is real, commits are decoys.  (•̀ᴗ•́)و
 
 ---
 
+![snake](https://raw.githubusercontent.com/chiruno-9/chiruno-9/output/snake-ice.svg)
+
 [![Streak](https://streak-stats.demolab.com/?user=chiruno-9&theme=dark&hide_border=true)](https://git.io/streak-stats)
