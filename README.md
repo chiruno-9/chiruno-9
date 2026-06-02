@@ -11,3 +11,4 @@ Activity is real, commits are decoys.  (•̀ᴗ•́)و
 
 ---
 
+![Contribution Graph](https://github-readme-activity-graph.vercel.app/graph?username=chiruno-9&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Graph)
